@@ -1,0 +1,19 @@
+{
+  "name": "npm-i",
+  "version": "0.0.1",
+  "description": "Install npm modules to arbitrary paths.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "i",
+    "install"
+  ],
+  "author": "Gellert Hegyi",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.0.0"
+  }
+}
