@@ -1,17 +1,25 @@
 {
   "name": "npm-i",
   "version": "0.0.1",
-  "description": "Install npm modules to arbitrary paths.",
+  "description": "Install npm modules and dependencies to arbitrary places from code.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/test.js"
   },
+  "repository": {
+     "type": "git",
+     "url": "git://github.com/gerhardberger/npm-i.git"
+   },
   "keywords": [
     "npm",
     "i",
     "install"
   ],
-  "author": "Gellert Hegyi",
+  "author": {
+    "name": "Gellert Hegyi",
+    "email": "93.morph@gmail.com",
+    "url": "https://twitter.com/thekaliprince"
+  },
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.0.0"
