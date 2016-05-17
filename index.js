@@ -11,7 +11,7 @@ module.exports = function (deps, opts, cb) {
     deps : _.isObject(opts) ? opts : {}
   deps = _.isString(deps) || _.isArray(deps) ? deps : []
 
-  let args = []
+  let args = opts.args || []
   opts.save    || args.push('-S')
   opts.saveDev || args.push('-D')
 
@@ -25,11 +25,8 @@ module.exports = function (deps, opts, cb) {
     cb()
   })
 
-  child.stdout.on('data', data => {
-    process.stdout.write(data)
-  })
-
-  child.stderr.on('data', data => {
-    process.stderr.write(data)
-  })
+  let stdout = opts.stdout || process.stdout,
+    stderr = opts.stderr || process.stderr
+  child.stdout.on('data', data => stdout.write(data))
+  child.stderr.on('data', data => stderr.write(data))
 }
